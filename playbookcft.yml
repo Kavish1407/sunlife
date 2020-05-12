@@ -7,7 +7,7 @@
         state: "present"
         region: "us-east-1"
         disable_rollback: true
-        template: "files/sagemaker.json"
+        template: "Files/sagemaker.json"
         template_parameters:
           NotebookInstanceName: "sunlife_instance"
           NotebookInstanceType: "ml.t2.medium"
