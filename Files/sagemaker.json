@@ -126,9 +126,9 @@
         },
         "EBSVolumeSize": {
             "Description": "Size of ebs volume",
-            "Type": "Integer",
+            "Type": "Number",
             "Default": 5
-        },
+        }
     },
     "Conditions": {
       "S3BucketEmpty": {
