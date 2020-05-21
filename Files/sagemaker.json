@@ -55,6 +55,9 @@
         },
         "SageMakerS3Bucket": {
           "default": "SageMaker S3 Bucket"
+        },
+        "EBSVolumeSize": {
+          "default": "EBS Volume Size"
         }
       }
     }
@@ -120,7 +123,12 @@
             ],
             "ConstraintDescription": "Must select a valid notebook instance type.",
             "Default": "Enabled"
-        }
+        },
+        "EBSVolumeSize": {
+            "Description": "Size of ebs volume",
+            "Type": "Integer",
+            "Default": 5
+        },
     },
     "Conditions": {
       "S3BucketEmpty": {
@@ -195,7 +203,7 @@
       ]
       },
       "RootAccess" : "Enabled",
-      "VolumeSizeInGB" : 5
+      "VolumeSizeInGB" : {"Ref" : "EBSVolumeSize"}
        }
       },
       "SageMakerExecutionRole":{
