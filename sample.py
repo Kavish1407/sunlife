@@ -1,5 +1,5 @@
 import os
 import logging
 logging.basicConfig(level=logging.INFO)
-x = os.getenv("stackid")
+x = os.environ["stackid"]
 logging.info("stack id is:"+x)
