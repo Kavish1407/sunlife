@@ -12,6 +12,7 @@ input_parameters["region"] = region
 input_parameters["NotebookInstanceName"] = NotebookInstanceName
 input_parameters["NotebookInstanceType"] = NotebookInstanceType
 input_parameters["EBSVolumeSize"] = EBSVolumeSize
+input_parameters["SageMakerRoleArn"] = SageMakerRoleArn
 with open("input_vars.yml","w") as file:
     yaml.dump(input_parameters,file)
 
