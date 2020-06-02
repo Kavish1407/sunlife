@@ -11,6 +11,7 @@ input_parameters["stack_name"] = stack_name
 input_parameters["region"] = region
 input_parameters["NotebookInstanceName"] = NotebookInstanceName
 input_parameters["NotebookInstanceType"] = NotebookInstanceType
+input_parameters["EBSVolumeSize"] = EBSVolumeSize
 with open("input_vars.yml","w") as file:
     yaml.dump(input_parameters,file)
 
