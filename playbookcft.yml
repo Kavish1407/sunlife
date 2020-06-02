@@ -1,17 +1,18 @@
 ---
 - hosts: localhost
   tasks:
+    - include_vars: input_vars.yml
     - name: create a cloudformation stack
       cloudformation:
-        stack_name: "ansiblecloudformation"
+        stack_name: "{{ stack_name }}"
         state: "present"
-        region: "us-east-1"
+        region: "{{ region }}"
         disable_rollback: true
         template: "Files/sagemaker.json"
         template_parameters:
-          NotebookInstanceName: "sunlifenew"
-          NotebookInstanceType: "ml.t2.medium"
-          SageMakerRoleArn: "arn:aws:iam::130159455024:role/service-role/AmazonSageMaker-ExecutionRole-20171220T151680"
-          EBSVolumeSize: 6
+          NotebookInstanceName: "{{ NotebookInstanceName }}"
+          NotebookInstanceType: "{{ NotebookInstanceType }}"
+          SageMakerRoleArn: "{{ SageMakerRoleArn }}"
+          EBSVolumeSize: "{{ EBSVolumeSize }}"
         tags:
-          Stack: "ansiblecloudformationstack"
+          Stack: "{{ stack_name }}"

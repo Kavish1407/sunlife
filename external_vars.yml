@@ -1,0 +1,7 @@
+stack_name: "ansiblecloudformation"
+region: "us-east-1"
+NotebookInstanceName: "sunlifenew"
+NotebookInstanceType: "ml.t2.medium"
+SageMakerRoleArn: "arn:aws:iam::130159455024:role/service-role/AmazonSageMaker-ExecutionRole-20171220T151680"
+EBSVolumeSize: 6
+

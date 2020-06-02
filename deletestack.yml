@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+   - name: delete a stack
+     cloudformation:
+       stack_name: "ansiblecloudformation"
+       region: "us-east-1"
+       state: "absent"
